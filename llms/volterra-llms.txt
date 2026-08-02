@@ -1,0 +1,23 @@
+# Volterra
+
+> Volterra was a distributed cloud company (VoltMesh multi-cloud networking and security, VoltStack edge application deployment) founded in 2017 and acquired by F5 in January 2021 for approximately $500M. It became the foundation of F5 Distributed Cloud Services; the Volterra API surface (ves.io.schema, console.ves.volterra.io) is catalogued under the F5 Distributed Cloud Services profile.
+
+This profile is maintained by API Evangelist as part of the APIs.io index. Volterra no longer operates as a standalone company: www.ves.io no longer serves a valid TLS certificate and volterra.io redirects to www.f5.com. The Volterra-branded developer tooling below remains published and maintained by F5.
+
+## Tooling
+
+- [Terraform provider volterraedge/volterra](https://registry.terraform.io/providers/volterraedge/volterra/latest): Official Volterra Terraform provider, still actively released (v0.12.2, July 2026)
+- [terraform-provider-volterra source](https://github.com/volterraedge/terraform-provider-volterra): Provider source in the F5-owned volterraedge GitHub org
+- [vesctl](https://gitlab.com/volterra.io/vesctl): Volterra's command line tool, modelled after the Volterra API
+
+## Successor
+
+- [F5 Distributed Cloud Services](https://www.f5.com/products/distributed-cloud-services): The platform Volterra became
+- [F5 Distributed Cloud API docs](https://docs.cloud.f5.com/docs-v2/api): The live API reference for the ves.io.schema API surface
+
+## Profile artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/volterra/refs/heads/main/apis.yml): APIs.json profile for Volterra
+- [Packages](https://raw.githubusercontent.com/api-evangelist/volterra/refs/heads/main/packages/volterra-packages.yml): First-party Terraform provider, modules, and vesctl binary
+- [CLI](https://raw.githubusercontent.com/api-evangelist/volterra/refs/heads/main/cli/volterra-cli.yml): vesctl command surface
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/volterra/refs/heads/main/security/volterra-domain-security.yml): TLS/DNSSEC/SPF/DMARC probe results

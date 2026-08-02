@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+notes: >-
+  No live well-known surface remains on the Volterra domains. www.ves.io
+  serves a broken TLS handshake (certificate error, connection fails);
+  volterra.io responds only with 301 redirects into www.f5.com for every
+  path probed. No document returned 200, so no raw files were saved.
+hosts:
+- host: https://www.ves.io
+  error: TLS handshake failure (curl exit 35, RSA block type error)
+  documents: []
+- host: https://www.volterra.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+  - path: /llms.txt
+    status: 301

@@ -1,0 +1,53 @@
+generated: '2026-07-21'
+method: searched
+source: https://gitlab.com/volterra.io/vesctl/-/blob/main/README.md
+name: vesctl
+description: >-
+  vesctl is Volterra's configuration command line utility for creating,
+  debugging, and diagnosing Volterra Services configuration. It is modelled
+  after the Volterra API (ves.io.schema) and exposes all Volterra commands;
+  it remains published by F5 following the January 2021 acquisition and is
+  used against the F5 Distributed Cloud (console.ves.volterra.io) API
+  gateway.
+repository: https://gitlab.com/volterra.io/vesctl
+releases: https://gitlab.com/volterra.io/vesctl/-/releases
+latest_version: 0.2.47
+latest_release_date: '2023-10-16'
+platforms: [darwin-amd64, linux-amd64]
+install:
+- method: download
+  platform: macos
+  command: >-
+    curl -LO "https://vesio.azureedge.net/releases/vesctl/$(curl -s
+    https://downloads.volterra.io/releases/vesctl/latest.txt)/vesctl.darwin-amd64.gz"
+- method: download
+  platform: linux
+  command: >-
+    curl -LO "https://vesio.azureedge.net/releases/vesctl/$(curl -s
+    https://downloads.volterra.io/releases/vesctl/latest.txt)/vesctl.linux-amd64.gz"
+configuration:
+  file: $HOME/.vesconfig
+  notes: Carries the API gateway URL and API credentials (client cert/key or P12 bundle).
+  credential_flags: [--cert, --key, --p12-bundle, --cacert]
+  p12_password_env: VES_P12_PASSWORD
+commands:
+- name: configuration
+  summary: Configure object (create/get/list/replace/delete Volterra configuration objects)
+- name: request
+  summary: Execute commands against the ves service API
+- name: site
+  summary: Manage site creation through view.aws_vpc APIs
+- name: completion
+  summary: Generate shell completion script
+- name: version
+  summary: Print build version
+- name: help
+  summary: Help about any command
+flows:
+- name: authenticate
+  summary: >-
+    Obtain API credentials from the Volterra (F5 Distributed Cloud) Console,
+    place them in $HOME/.vesconfig with the API gateway URL, then run vesctl
+    configuration/request commands.
+- name: debug-requests
+  summary: Use --show-curl to emit the underlying API requests in curl format.

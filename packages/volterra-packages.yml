@@ -1,0 +1,51 @@
+generated: '2026-07-21'
+method: searched
+source: https://registry.terraform.io/providers/volterraedge/volterra/latest
+notes: >-
+  Volterra was acquired by F5 in January 2021; the volterraedge GitHub org is
+  now owned by F5 Inc. but the Volterra-branded packages remain published and
+  actively maintained. No npm/PyPI/Maven/NuGet/RubyGems/crates.io first-party
+  client libraries were found under the Volterra brand (the broader platform
+  SDK surface lives under F5 Distributed Cloud Services).
+packages:
+- language: hcl
+  registry: terraform
+  name: volterraedge/volterra
+  url: https://registry.terraform.io/providers/volterraedge/volterra/latest
+  source: https://github.com/volterraedge/terraform-provider-volterra
+  install: terraform init  # provider block source = "volterraedge/volterra"
+  version: 0.12.2
+  published: '2026-07-13'
+  downloads: 1250404
+  official: true
+- language: go
+  registry: gitlab-releases
+  name: vesctl
+  url: https://gitlab.com/volterra.io/vesctl/-/releases
+  install: >-
+    curl -LO "https://vesio.azureedge.net/releases/vesctl/$(curl -s
+    https://downloads.volterra.io/releases/vesctl/latest.txt)/vesctl.darwin-amd64.gz"
+  version: 0.2.47
+  published: '2023-10-16'
+  official: true
+  notes: Prebuilt CLI binary for macOS and Linux; see cli/volterra-cli.yml for the command surface.
+- language: hcl
+  registry: terraform-module
+  name: volterraedge/secure-k8s-gateway/volterra
+  url: https://github.com/volterraedge/terraform-volterra-secure-k8s-gateway
+  official: true
+- language: hcl
+  registry: terraform-module
+  name: volterraedge/web-app-security/volterra
+  url: https://github.com/volterraedge/terraform-volterra-web-app-security
+  official: true
+- language: hcl
+  registry: terraform-module
+  name: volterraedge/app-delivery-network/volterra
+  url: https://github.com/volterraedge/terraform-volterra-app-delivery-network
+  official: true
+- language: hcl
+  registry: terraform-module
+  name: volterraedge/multicloud-networking/volterra
+  url: https://github.com/volterraedge/terraform-volterra-multicloud-networking
+  official: true
