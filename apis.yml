@@ -24,6 +24,17 @@ x-status: acquired
 x-acquired-by: f5
 x-acquisition-date: '2021-01'
 x-successor: f5-distributed-cloud-services
+deliveryModel:
+  model: library
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Library · distributed through package registries, no callable service
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
